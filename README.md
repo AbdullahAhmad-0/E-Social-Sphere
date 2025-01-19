@@ -18,28 +18,28 @@ This is a Laravel-based web application providing services like social media mar
 
 ### Steps
 1. Clone the repository:
-   git clone https://github.com/AbdullahAhmad-0/E-Social-Sphere.git
-   cd E-Social-Sphere.git
+   - git clone https://github.com/AbdullahAhmad-0/E-Social-Sphere.git
+   - cd E-Social-Sphere.git
 
 2. Install dependencies:
-   composer install
+   - composer install
 
-3. Set up environment variables:
+1. Set up environment variables:
    - Copy the `.env.example` file and rename it to `.env`.
    - Update the `.env` file with your database credentials.
 
-4. Run migrations and seed data:
-   Don't need to do it :-)
-   If you accidentally do it then run: php artisan migrate:reset
+2. Run migrations and seed data:
+   - Don't need to do it :-)
+   - If you accidentally do it then run: php artisan migrate:reset
 
-5. Import sample data into the MySQL database:
+3. Import sample data into the MySQL database:
    - Use the `esocialsphere.sql` file to populate the database.
    - Database name: `esocialsphere`
    - Execute the SQL file:
      mysql -u <username> -p <database_name> < esocialsphere.sql or simply import the esocialsphere.sql into your phpmyadmin or mysql database.
 
-6. Start the development server:
-   php artisan serve
+4. Start the development server:
+   - php artisan serve
 
 ## Admin Panel
 Access the admin panel at: `http://<your-domain>/admin`.
