@@ -1,0 +1,106 @@
+@import "../common/common";
+
+/* -------------------------------------------------------------------------- */
+/*                                    View                                    */
+/* -------------------------------------------------------------------------- */
+
+.grid-item {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    .grid-s-item {
+        margin: 10px;
+        background-color: $white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        p {
+            display: flex;
+            align-items: center; /* Vertically center the icon and text */
+            margin-bottom: 5px; /* Add some spacing between each line */
+            padding: 1px 0;
+            padding-left: 10px;
+            i {
+                width: 30px;
+                color: $primary-color;
+            }
+            a {
+                text-decoration: none;
+                color: $primary-color;
+                transition: color 0.2s;
+                &:hover {
+                    color: $secondary-color;
+                    text-shadow: 1px 1px 2px $primary-color;
+                }
+            }
+        }
+    }
+
+    .contact-container {
+        h4 {
+            color: $primary-color;
+            background-color: rgba($color: $primary-color, $alpha: 0.2);
+            padding: 5px;
+        }
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        animation: fadeIn 1s;
+        .contact-form {
+            display: grid;
+            gap: 10px;
+            .form-group {
+                display: grid;
+                gap: 5px;
+                label {
+                    font-weight: bold;
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+
+                    &:hover {
+                        background-color: rgba($color: $primary-color, $alpha: 0.1);
+                    }
+                }
+                textarea {
+                    // resize: vertical;
+                    resize: none;
+                }
+            }
+            .submit-btn {
+                background-color: transparent;
+                border: 1px solid $primary-color;
+                color: $black;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: $primary-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .contact-container {
+        padding: 10px;
+    }
+}

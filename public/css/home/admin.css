@@ -1,0 +1,99 @@
+/* -------------------------------------------------------------------------- */
+/*                                    View                                    */
+/* -------------------------------------------------------------------------- */
+.grid-item {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.grid-item .grid-s-item {
+  margin: 10px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.grid-item .grid-s-item p {
+  display: flex;
+  align-items: center; /* Vertically center the icon and text */
+  margin-bottom: 5px; /* Add some spacing between each line */
+  padding: 1px 0;
+  padding-left: 10px;
+}
+.grid-item .grid-s-item p i {
+  width: 30px;
+  color: #1BAE70;
+}
+.grid-item .grid-s-item p a {
+  text-decoration: none;
+  color: #1BAE70;
+  transition: color 0.2s;
+}
+.grid-item .grid-s-item p a:hover {
+  color: #3a3a3c;
+  text-shadow: 1px 1px 2px #1BAE70;
+}
+.grid-item .contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  animation: fadeIn 1s;
+}
+.grid-item .contact-container h4 {
+  color: #1BAE70;
+  background-color: rgba(27, 174, 112, 0.2);
+  padding: 5px;
+}
+.grid-item .contact-container .contact-form {
+  display: grid;
+  gap: 10px;
+}
+.grid-item .contact-container .contact-form .form-group {
+  display: grid;
+  gap: 5px;
+}
+.grid-item .contact-container .contact-form .form-group label {
+  font-weight: bold;
+}
+.grid-item .contact-container .contact-form .form-group input,
+.grid-item .contact-container .contact-form .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.grid-item .contact-container .contact-form .form-group input:hover,
+.grid-item .contact-container .contact-form .form-group textarea:hover {
+  background-color: rgba(27, 174, 112, 0.1);
+}
+.grid-item .contact-container .contact-form .form-group textarea {
+  resize: none;
+}
+.grid-item .contact-container .contact-form .submit-btn {
+  background-color: transparent;
+  border: 1px solid #1BAE70;
+  color: #3a3a3c;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.grid-item .contact-container .contact-form .submit-btn:hover {
+  background-color: #1BAE70;
+  color: #fff;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    padding: 10px;
+  }
+}/*# sourceMappingURL=admin.css.map */

@@ -1,0 +1,98 @@
+/* -------------------------------------------------------------------------- */
+/* btn-anim        = animation button                                         */
+/* btn-anim-u      = animation button line upper                              */
+/* btn-anim-h      = animation button hidden                                  */
+/* btn-anim-s      = animation button small                                   */
+/* btn-anim-s-u    = animation button small line upper                        */
+/* btn-anim-s-h    = animation button small hidden                            */
+/* btn-black       = change color to black with transition                    */
+/* -------------------------------------------------------------------------- */
+@import "./common";
+
+@mixin btn-anim($s: "n", $u: "n", $h: "n") {
+    margin: 150px 0;
+    @if $s == "n" {
+        padding: 15px 30px;
+    } @else {
+        padding: 10px 15px;
+    }
+
+    @if $h == "n" {
+        background-color: $primary-color;
+    } @else {
+        background-color: transparent;
+    }
+
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: medium;
+    color: $white;
+    border: 1px solid $primary-color;
+    transition: background 0.5s;
+
+    position: relative;
+
+    /* overflow: hidden; */
+    &:hover {
+        @if $h == "n" {
+            background-color: transparent;
+        } @else {
+            background-color: $primary-color;
+        }
+
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        background: $primary-color;
+        position: absolute;
+        left: 0;
+
+        @if $u == "n" {
+            bottom: -6px;
+        } @else {
+            bottom: 2px;
+        }
+
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.6s ease-in-out;
+    }
+}
+
+.btn-black {
+    transition: color 0.7s;
+
+    &:hover {
+        color: $black;
+    }
+}
+.btn-anim {
+    @include btn-anim("n", "n", "n");
+}
+.btn-anim-u {
+    @include btn-anim("n", "y", "n");
+}
+.btn-anim-h {
+    @include btn-anim("n", "n", "y");
+}
+.btn-anim-u-h {
+    @include btn-anim("n", "y", "y");
+}
+.btn-anim-s {
+    @include btn-anim("y", "n", "n");
+}
+.btn-anim-s-u {
+    @include btn-anim("y", "y", "n");
+}
+.btn-anim-s-h {
+    @include btn-anim("y", "n", "y");
+}
+.btn-anim-s-u-h {
+    @include btn-anim("y", "y", "y");
+}

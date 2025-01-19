@@ -1,0 +1,123 @@
+@import "./common";
+
+@mixin heading($h: "b", $tc: "y", $c: "d") {
+    @if $h == "b" {
+        font-size: 40px;
+    } @else {
+        font-size: 25px;
+    }
+    @if $c == "d" {
+        color: $black;
+    } @else {
+        color: $white;
+    }
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px $primary-color;
+    @if $tc == "y" {
+        text-align: center;
+    }
+}
+
+.heading-common {
+    @include heading("b", "y", "d");
+}
+.heading-common-l {
+    @include heading("b", "y", "l");
+}
+.heading-common-l-na {
+    @include heading("b", "n", "l");
+}
+.heading-common-d-na {
+    @include heading("b", "n", "d");
+}
+.heading-common-s {
+    @include heading("s", "y", "d");
+}
+.heading-common-s-l {
+    @include heading("s", "y", "l");
+}
+.heading-common-s-l-na {
+    @include heading("s", "n", "l");
+}
+.heading-common-s-d-na {
+    @include heading("s", "n", "d");
+}
+.txt-center {
+    text-align: center;
+}
+
+.cmn-padding {
+    padding: 100px 5%;
+}
+.cmn-padding-sb {
+    padding: 100px 5%;
+    padding-bottom: 30px;
+}
+.cmn-padding-stb {
+    padding: 30px 5%;
+}
+.cmn-padding-st {
+    padding: 100px 5%;
+    padding-top: 30px;
+}
+.b-sp {
+    padding-bottom: 30px;
+}
+.t-sp {
+    padding-top: 30px;
+}
+
+.content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media {
+    a {
+        text-decoration: none;
+        padding-right: 10px;
+        i {
+            transition: color 0.2s;
+            &:hover {
+                text-shadow: 1px 1px 2px $white;
+                color: $primary-color;
+            }
+        }
+    }
+}
+.social-media-d {
+    a {
+        text-decoration: none;
+        padding-right: 10px;
+        i {
+            color: $secondary-color;
+            text-shadow: 1px 1px 2px $white;
+            transition: color 0.2s;
+            &:hover {
+                text-shadow: 1px 1px 2px $secondary-color;
+                color: $primary-color;
+            }
+        }
+    }
+}
+.social-media-od {
+    a {
+        text-decoration: none;
+        padding-right: 10px;
+        i {
+            margin-top: 0;
+            color: $primary-color;
+            transition: color 0.2s;
+            &:hover {
+                color: $secondary-color;
+                text-shadow: 1px 1px 2px $primary-color;
+            }
+        }
+    }
+}
+.bg-transparent {
+    background-color: transparent;
+}
+.p-0 {padding: 0 !important}
+.m-0 {margin: 0 !important;}
